@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+    <meta charset="utf-8" /> 
+    <title>gamble</title>
+  </head>
+  <body>
+   <p>好きな色 <span id="span1"></span></p>
+   <p>嫌いな色 <span id="span2"></span></p>
+   <form name="form1">
+	<input type="radio" name="color1" value="red" checked> 赤
+	<input type="radio" name="color1" value="blue" > 青
+	<input type="radio" name="color1" value="yellow" > 黄
+   </form>
+   <input type="button" value="ボタン1" onclick="clickBtn1()"/>
+   <p></p>
+   <form name="form2">
+	<input type="radio" name="color2" value="red" checked> 赤
+	<input type="radio" name="color2" value="blue" > 青
+	<input type="radio" name="color2" value="yellow" > 黄
+   </form>
+   <input type="button" value="ボタン2" onclick="clickBtn2()"/>
+
+   <script>
+     function clickBtn1(){
+  	 let str = "";
+	 const color1 = document.form1.color1;
+
+	 for (let i = 0; i < color1.length; i++){
+	 	if(color1[i].checked){ //(color1[i].checked === true)と同じ
+	 		str = color1[i].value;
+			break;
+		}
+	}
+	document.getElementById("span1").textContent = str;
+}
+     function clickBtn2(){
+         let str = "";
+	 const color2 = document.form2.color2;
+
+	 for (let i = 0; i < color2.length; i++){
+	 	if(color2[i].checked){ //(color1[i].checked === true)と同じ
+	 		str = color2[i].value;
+			break;
+		}
+	}
+	document.getElementById("span2").textContent = str;
+}
+</script>
+  </body>
+ </html>
