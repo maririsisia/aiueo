@@ -5,13 +5,13 @@
     <title>gamble</title>
   </head>
   <body>
-   <p>?I?ⵂ??F <span id="span1"></span></p>
+   <p>好きな色<span id="span1"></span></p>
    <form name="form1">
-	<input type="checkbox" name="color1" value="red" checked> ?ﾔ
-	<input type="checkbox" name="color1" value="blue" > ?ﾂ
-	<input type="checkbox" name="color1" value="yellow" > ??
+	<input type="checkbox" name="color1" value="red" checked> 赤
+	<input type="checkbox" name="color1" value="blue" > 青
+	<input type="checkbox" name="color1" value="yellow" > 黄
    </form>
-   <input type="button" value="?{?^??" onclick="clickBtn1()"/>
+   <input type="button" value="ボタン" onclick="clickBtn1()"/>
 
    <script>
      function clickBtn1(){
@@ -19,7 +19,7 @@
         	const color1 = document.form1.color1;
 
 	        for (let i = 0; i < color1.length; i++){
-	        	if(color1[i].checked){ //(color1[i].checked === true)?Ɠ???
+	        	if(color1[i].checked){ //(color1[i].checked === true)と同じ
 		        	arr1.push(color1[i].value);
 	        	}
         	}
