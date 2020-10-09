@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script language="javascript" type="text/javascript" src="start.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+ <body>
+     <div id="figure">
+      <canvas id="cvs"　width="300" height="300"></canvas>
+  </div>
+
+    <div id="data">
+      <p>たて <input type="number" value="15" min="1" max="30" class="inputBox" id="rectH" onchange="change()"> cm</p>
+      <p>よこ <input type="number" value="20" min="1" max="30" class="inputBox" id="rectW" onchange="change()"> cm</p>
+      <button onclick="OnButtonClick();">計算</button>
+      <br>
+      <div>
+        <p class="answerBox">面積：</p>
+        <p class="answerBox" id="answer"></p>
+      </div>
+    </div>
+
+
+ 
+ <body>
+<html>
