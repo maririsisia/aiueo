@@ -19,8 +19,67 @@
         <p class="answerBox" id="answer"></p>
       </div>
     </div>
+window.onload = function(){
+    change()
+}
 
+function change(){
+    
+    var cvs = document.getElementById("cvs");
+    var ctx = cvs.getContext("2d");
+    
 
- 
+    var rectH = document.getElementById("rectH").value;
+    var rectW = document.getElementById("rectW").value;
+    //色を指定
+    ctx.strokeStyle="black";  //線の色を指定
+    ctx.fillStyle="white";//塗りつぶしの色を指定
+
+    //四角形（塗りつぶし）
+    //ctx.fillRect(0, 0, windowWidth, windowHeight);
+    ctx.clearRect(0, 0, 300,300);
+    //四角形（輪郭）
+    ctx.fillRect(0, 0, 10*rectW, 10*rectH);
+    ctx.strokeRect(0, 0, 10*rectW, 10*rectH);
+    
+    
+}
+
+//ボタン押下された時
+function OnButtonClick() {
+    var rectH = document.getElementById("rectH").value;
+    var rectW = document.getElementById("rectW").value;
+    var answer =  document.getElementById("answer");
+    answer.innerHTML = rectH*rectW + "㎠";
+}
+
+ body {
+    padding: 0;
+    margin: 0;
+}
+#data{
+    padding:10px;
+    background: lightcyan;
+    height:180px;
+}
+#figure{
+    width:300px;
+    height:300px;
+    padding:10px;
+    background:lightgray;
+}
+.inputBox{
+    height:30px;
+    width:50px;
+    font-size:20px;
+}
+.answerBox{
+    float:left;
+    margin:5px;
+}
+#cvs{
+    padding: 0;
+    margin: 0; 
+}
  <body>
 <html>
